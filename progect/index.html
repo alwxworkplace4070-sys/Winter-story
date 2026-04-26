@@ -7,10 +7,10 @@
     <title>Новогодние сказки</title>
     <link rel="stylesheet" href="/Winter-story/css/main.css">
 </head>
-<!-- Снежинки -->
+
 <script>
     function createSnowflakes() {
-        const snowflakesCount = 50; // Количество снежинок
+        const snowflakesCount = 50;
         const wrapper = document.querySelector('.wrapper');
         
         for (let i = 0; i < snowflakesCount; i++) {
@@ -18,13 +18,11 @@
             snowflake.classList.add('snowflake');
             snowflake.innerHTML = '❄️';
             
-            // Случайные параметры для каждой снежинки
-            const size = Math.random() * 1.5 + 0.5; // Размер от 0.5em до 2em
-            const left = Math.random() * 100; // Позиция слева от 0% до 100%
-            const duration = Math.random() * 5 + 5; // Длительность от 5s до 10s
-            const delay = Math.random() * 5; // Задержка от 0s до 5s
+            const size = Math.random() * 1.5 + 0.5;
+            const left = Math.random() * 100;
+            const duration = Math.random() * 5 + 5;
+            const delay = Math.random() * 5;
             
-            // Применяем стили
             snowflake.style.left = left + '%';
             snowflake.style.fontSize = size + 'em';
             snowflake.style.animationDuration = duration + 's';
@@ -35,22 +33,21 @@
         }
     }
     
-    // Запускаем создание снежинок после загрузки страницы
     window.addEventListener('load', createSnowflakes);
 </script>
+
 <body>
     <div class="wrapper">    
-        <!-- Изображение корус.svg выносим отдельно, вне header -->
         <div class="korpus-image">
-            <img src="/Winter-story/img/корус.svg">
+            <img src="/Winter-story/img/корус.svg" alt="Корус">
         </div>
 
         <header class="container"> 
             <nav>
                 <ul>
-                    <li ><a href="/">Главная</a></li>
-                    <li class="active"><a href="/about.html">Сказки</a></li>
-                    <li><a href="/autor.html">О нас</a></li>
+                    <li class="active"><a href="/Winter-story/">Главная</a></li>
+                    <li><a href="/Winter-story/about.html">Сказки</a></li>
+                    <li><a href="/Winter-story/autor.html">О нас</a></li>
                 </ul>
             </nav>
         </header>
@@ -63,7 +60,6 @@
             <img src="/Winter-story/img/tree2.svg" alt="Новогодняя елка" class="hero-image">
         </div>
 
-        <!-- Текстовый блок выносим отдельно -->
         <div class="text-block">
             <p>Нет сказок лучше тех,<br>которые создаются<br>в любимом корпусе!</p>
         </div>

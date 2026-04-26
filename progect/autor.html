@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Создатели чуда</title>
-   <link rel="stylesheet" href="/Winter-story/css/main.css">
+    <link rel="stylesheet" href="/Winter-story/css/main.css">
     <style>
-        /* Стили для выравнивания передней стороны карточек */
         .flip-card {
             background-color: transparent;
             width: 300px;
             height: 400px;
             perspective: 1000px;
+            margin: 20px;
         }
 
         .flip-card-inner {
@@ -61,7 +61,6 @@
             border-radius: 16px;
         }
 
-        /* Контент передней стороны — используем грид для фиксации структуры */
         .card-content {
             display: flex;
             flex-direction: column;
@@ -72,15 +71,14 @@
             height: 100%;
         }
 
-        /* Верхняя часть (роль) может занимать место, но не влиять на выравнивание заголовка */
         .creator-role {
             text-align: center;
             margin: 0;
             line-height: 1.4;
             flex-shrink: 0;
+            font-size: 16px;
         }
 
-        /* QR-код */
         .front-qr-image {
             max-width: 80px;
             margin: 10px auto;
@@ -92,22 +90,12 @@
             flex-shrink: 0;
         }
 
-        /* Заголовок — прижимаем к низу с помощью margin-top: auto */
         .creator-name {
             text-align: center;
             margin: 0;
             margin-top: auto;
             padding-bottom: 10px;
-        }
-
-        /* Первой карточке тоже добавляем отступ сверху, чтобы структура совпадала */
-        .first-card .creator-name {
-            margin-top: auto;
-        }
-
-        .title {
-            text-align: center;
-            margin-bottom: 40px;
+            font-size: 24px;
         }
 
         .creators-grid {
@@ -115,47 +103,27 @@
             gap: 40px;
             justify-content: center;
             flex-wrap: wrap;
-        }
-
-        nav ul {
-            display: flex;
-            gap: 20px;
-            list-style: none;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        nav a.active {
-            font-weight: bold;
-            text-decoration: underline;
+            margin-top: 40px;
         }
     </style>
 </head>
+
 <body>
     <div class="wrapper">
         <div class="container">
-            <!-- Навигационная панель -->
             <header>
                 <nav>
                     <ul>
-                        <li><a href="index.html" class="active">Главная</a></li>
-                        <li><a href="#">Сказки</a></li>
-                        <li><a href="#">О нас</a></li>
+                        <li><a href="/Winter-story/">Главная</a></li>
+                        <li><a href="/Winter-story/about.html">Сказки</a></li>
+                        <li class="active"><a href="/Winter-story/autor.html">О нас</a></li>
                     </ul>
                 </nav>
             </header>
 
-            <!-- Заголовок -->
             <h1 class="title">Создатели чуда</h1>
 
-            <!-- Карточки создателей -->
             <div class="creators-grid">
-                <!-- Киселева Наталья Юрьевна -->
                 <div class="flip-card first-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
@@ -170,7 +138,6 @@
                     </div>
                 </div>
 
-                <!-- Актеры сказки 2024г -->
                 <div class="flip-card second-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
